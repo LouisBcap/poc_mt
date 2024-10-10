@@ -1,0 +1,57 @@
+/* Styles pour l'en-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.upload-container input[type="file"] {
+    display: inline-block;
+}
+
+.chart-container {
+    background-color: #f6f6f6;
+    position: relative;
+}
+
+/* Styles pour les boutons */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* Cacher les boutons par défaut */
+#toggle-nodes,
+#export-pdf,
+#export-svg,
+#export-png {
+    display: none;
+}

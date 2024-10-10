@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Organigramme</title>
+</head>
+
+<body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-org-chart@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.1.2/build/d3-flextree.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- En-tête avec texte et logos -->
+    <div class="header">
+        <div class="title">
+            Toulouse, Mairie Métropole - Organigramme Général des Services
+        </div>
+        <div class="logos">
+            <img src="./src/img/mairie_toulouse.png" alt="Mairie de Toulouse" class="logo">
+        </div>
+    </div>
+
+    <!-- Conteneur pour les boutons et l'upload -->
+    <div class="button-container">
+        <button id="toggle-nodes">Déplier tout</button>
+        <button id="export-pdf">Exporter en PDF</button>
+        <button id="export-svg">Exporter en SVG</button>
+        <button id="export-png">Exporter en PNG</button>
+        <input type="file" id="upload" accept=".xls, xlsx" />
+    </div>
+
+    <div class="chart-container"></div>
+
+    <script src="script.js"></script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+</body>
+</html>
