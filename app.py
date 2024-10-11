@@ -7,6 +7,9 @@ from fastapi import FastAPI
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
+
+if not os.path.exists('uploads'):
+    os.makedirs('uploads')
 # app = FastAPI()
 
 # Route for handling the file upload and processing
@@ -34,9 +37,4 @@ def upload_file():
     return processed_data.to_json(orient='records')
 
 if __name__ == '__main__':
-    if not os.path.exists('uploads'):
-        os.makedirs('uploads')
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-# @app.route('/upload', methods=['GET'])
-# def upload_file():
-#     return {'message': 'nooobs'}
